@@ -1,6 +1,6 @@
 {
   "scripts": {
-    "build": "purgecss --css scss/custom.css --content login.html -o style.css"
+    "build": "purgecss --css scss/custom.css --content index.php -o custom.css"
   },
   "dependencies": {
     "bootstrap": "^5.3.3"

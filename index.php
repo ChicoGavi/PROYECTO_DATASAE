@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <link rel="stylesheet" href="/scss/custom.css">
+    <link rel="stylesheet" href="custom.css">
     <title>Calculadora UC</title>
 </head>
 <body>
@@ -112,8 +112,8 @@
                                         </select>
                                     </div>
                                     <div>
-                                        <?php
-                                        class Calculadora {
+                                    <?php
+                                        class Calculadora{
                                             private $operaciones;
 
                                             public function __construct() {
@@ -143,7 +143,6 @@
                                                         $esValido = true;
                                                         return floatval($digito); // Convertir a float y devolver
                                                     } else {
-                                                        $intento++;
                                                         return null; // Si no es válido, devolver null
                                                     }
                                                 }
@@ -185,16 +184,12 @@
                                                     return "<h5 class='text-danger'>Por favor seleccione una opción válida</h5>";
                                                 }
                                             }
-
-                                            // Método para obtener las operaciones (útil para el formulario)
-                                            public function obtenerOperaciones() {
-                                                return $this->operaciones;
-                                            }
                                         }
 
                                         // Procesar el formulario
                                         $resultado = '';
                                         $calculadora = new Calculadora();
+
 
                                         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                             if (isset($_POST['p-digito']) && isset($_POST['s-digito']) && isset($_POST['operacion'])) {
@@ -204,10 +199,12 @@
 
                                                 $resultado = $calculadora->calcular($pDigito, $sDigito, $operacion);
                                                 echo $resultado;
+
+
                                             }
                                         }
 
-                                        ?>
+                                    ?>
                                     </div>
 
                                     <div class="card-footer">
