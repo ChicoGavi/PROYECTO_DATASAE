@@ -1,0 +1,8 @@
+{
+  "scripts": {
+    "build": "purgecss --css scss/custom.css --content login.html -o style.css"
+  },
+  "dependencies": {
+    "bootstrap": "^5.3.3"
+  }
+}
