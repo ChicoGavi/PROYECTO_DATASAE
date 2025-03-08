@@ -1,0 +1,54 @@
+.centrar{
+  align-content: center;
+
+}
+
+.profile-card {
+  background-color: #1a252f; /* Color oscuro similar al de la imagen */
+  color: white;
+  max-width: 380px; /* Ancho aproximado de la tarjeta */
+   /* Centrado y margen */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra para efecto 3D */
+  cursor: pointer;
+}
+.profile-img {
+  width: 40px; /* Tamaño de la imagen */
+  height: 40px;
+  border-radius: 50%; /* Hace la imagen circular */
+  object-fit: cover; /* Ajusta la imagen sin deformarla */
+
+}
+.name-text {
+  font-size: 1.1rem;
+  overflow: hidden; /* Para manejar el texto cortado */
+  text-overflow: ellipsis; /* Añade "..." cuando el texto se corta */
+  white-space: nowrap; /* Evita que el texto se divida en líneas */
+   /* Limita el ancho del texto */
+}
+
+.vertical-menu {
+  width: 250px; /* Ancho fijo del menú */
+  height: 100vh; /* Altura completa de la pantalla */
+  background-size: cover; /* Ajusta la imagen para cubrir el área */
+  background-position: center; /* Centra la imagen */
+  padding: 20px 0;
+  position: fixed; /* Fija el menú a un lado */
+  top: 150px;
+  left: 0;
+  z-index: 1000; /* Asegura que esté por encima de otros elementos */
+}
+
+/* Overlay para mejorar legibilidad */
+.vertical-menu::before {
+  background: rgba(0, 0, 0, 0.3); /* Capa semitransparente */
+
+}
+
+/* Estilo de los enlaces */
+.vertical-menu .nav-link {
+  transition: background-color 0.3s; /* Efecto de transición */
+}
+
+
+
+@import "../node_modules/bootstrap/scss/bootstrap";
